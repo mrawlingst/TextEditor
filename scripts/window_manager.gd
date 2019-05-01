@@ -4,13 +4,6 @@ onready var window = preload("res://scenes/window.tscn")
 
 var windows: Array
 
-func _process(delta):
-    if Input.is_action_just_pressed("new_window"):
-        add_window(self)
-    
-    if Input.is_action_just_pressed("close_window"):
-        remove_window()
-
 # Add a new window
 func add_window(parent: Node) -> void:
     var instance = window.instance()
